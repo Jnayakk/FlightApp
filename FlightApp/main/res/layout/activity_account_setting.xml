@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="15sp"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@drawable/airplane"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:id="@+id/allScreen">
+
+
+    <TextView
+        android:text="Double Touch Information to Edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:textSize="10sp"
+        android:layout_marginBottom="15sp"
+        android:id="@+id/textView10" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="355dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textSize="15sp"
+            android:layout_marginBottom="20sp"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:id="@+id/accountSettingEmail"
+            android:text="email - should not see any of this" />
+    </LinearLayout>
+
+    <TextView
+        android:text="Personal Information"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10sp"
+        android:id="@+id/accountSettingPersonal" />
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ViewSwitcher
+            android:id="@+id/firstNameSwitcher"
+            android:layout_width="128dp"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:textSize="15sp"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:id="@+id/accountSettingFirstName"
+                android:clickable="true"
+                android:onClick="TextViewClicked"
+                android:text="firstName"
+                android:textColorHint="#ffffff" />
+
+            <EditText
+                android:textSize="15sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="first name"
+                android:id="@+id/editFirstName"
+                android:textColorHint="#ffffff"/>
+        </ViewSwitcher>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ViewSwitcher
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/lastNameSwitcher"
+            android:layout_width="127dp"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:textSize="15sp"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:id="@+id/accountSettingLastName"
+                android:clickable="true"
+                android:onClick="TextViewClicked"
+                android:text="lastName"
+                android:textColorHint="#ffffff" />
+
+            <EditText
+                android:textSize="15sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="last name"
+                android:id="@+id/editLastName" />
+        </ViewSwitcher>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="354dp"
+        android:layout_height="wrap_content">
+        <ViewSwitcher
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/addressSwitcher"
+            android:layout_width="127dp"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:textSize="15sp"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:id="@+id/accountSettingAddress"
+                android:clickable="true"
+                android:onClick="TextViewClicked"
+                android:text="SHOULD NOT SEE THIS- home address" />
+
+            <EditText
+                android:textSize="15sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="address"
+                android:id="@+id/editAddress" />
+        </ViewSwitcher>
+    </LinearLayout>
+
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.22" />
+
+    <TextView
+        android:text="Billing Information"
+        android:layout_marginBottom="10sp"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/accountSettingBilling" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="357dp"
+        android:layout_height="wrap_content">
+        <ViewSwitcher
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/cardNumSwitcher"
+            android:layout_width="127dp"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:textSize="15sp"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:id="@+id/accountSettingCardNum"
+                android:clickable="true"
+                android:onClick="TextViewClicked"
+                android:text="SHOULD NOT SEE THIS- card number" />
+
+            <EditText
+                android:textSize="15sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="card #"
+                android:id="@+id/editCardNum" />
+        </ViewSwitcher>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="356dp"
+        android:layout_height="wrap_content">
+        <ViewSwitcher
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/expireSwitcher"
+            android:layout_width="127dp"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:textSize="15sp"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:id="@+id/accountSettingExpire"
+                android:clickable="true"
+                android:onClick="TextViewClicked"
+                android:text="SHOULD NOT SEE THIS- card num expire" />
+
+            <EditText
+                android:textSize="15sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="expire date"
+                android:id="@+id/editExpire"/>
+        </ViewSwitcher>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="152dp">
+
+        <Button
+            android:text="Cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="33dp"
+            android:layout_marginStart="33dp"
+            android:id="@+id/accountSettingCancelButton"
+            android:layout_alignBaseline="@+id/accountSettingSaveButton"
+            android:layout_alignBottom="@+id/accountSettingSaveButton"
+            android:layout_toRightOf="@+id/accountSettingSaveButton"
+            android:onClick="cancel"
+            android:layout_toEndOf="@+id/accountSettingSaveButton" />
+
+        <Button
+            android:text="Save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="66dp"
+            android:layout_marginStart="66dp"
+            android:onClick="save"
+            android:id="@+id/accountSettingSaveButton"
+            android:visibility="invisible"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="28dp" />
+    </RelativeLayout>
+
+</LinearLayout>

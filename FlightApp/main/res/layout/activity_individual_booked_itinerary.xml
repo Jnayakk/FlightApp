@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/airplane"
+    android:orientation="vertical"
+    >
+    <TextView
+        android:text="Below is a list of flights in the order they are taken"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/instructionsText"
+        android:textSize="16sp"
+        android:textColor="#ffffff"
+        android:gravity="center"/>
+
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:id="@+id/display_booked_itinerary_flights"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:dividerHeight="10dp"
+        android:divider="@android:color/holo_blue_light"></ListView>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:text="@string/traveltime"
+            android:layout_weight="1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/totalitinerarytraveltimeText"
+            android:textSize="16sp"
+            android:textColor="#ffffff"
+            android:gravity="center"/>
+
+        <TextView
+            android:text="@string/priceText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/totalitinerarycostText"
+            android:textSize="16sp"
+            android:textColor="#ffffff"
+            android:gravity="center"/>
+    </LinearLayout>
+</LinearLayout>

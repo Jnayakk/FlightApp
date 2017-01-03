@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:orientation="vertical"
+    android:background="@drawable/airplane"
+    android:gravity="center_vertical|center_horizontal">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome_text"
+        android:id="@+id/textView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        tools:gravity="center_vertical|center_horizontal"
+        android:layout_weight="0.17"
+        android:gravity="center_vertical|center_horizontal"
+        android:textColor="#ffffff" />
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="20"
+        android:id="@+id/editEmail"
+        android:hint="@string/enter_email"
+        android:textColorHint="#ffffff"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:gravity="center_vertical|center_horizontal"
+        android:textColor="#ffffff" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="20"
+        android:id="@+id/editPassword"
+        android:hint="@string/enter_password"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:gravity="center_vertical|center_horizontal"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="@string/button_login"
+        android:onClick="Login"
+        android:textColor="#ffffff"
+        android:background="@drawable/button_boarder"/>
+
+    <TextView
+        android:text="@string/create_client"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:id="@+id/create_client"
+        android:onClick="Create"
+        android:clickable="true"
+        android:textColor="#ffffff" />
+
+</LinearLayout>

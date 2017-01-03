@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:text="@string/numberofStops"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/numberofStopsText"
+            android:gravity="start"
+            android:textColor="@android:color/darker_gray"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/blank_space" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">>
+        <TextView
+            android:text="@string/origin"
+            android:layout_weight="1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/origin_text"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:gravity="center"/>
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/arrow_shape"
+            android:id="@+id/arrowShape" />
+        <TextView
+            android:text="@string/destination"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/destination_text"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">>
+        <TextView
+            android:text="@string/departureTime"
+            android:layout_weight="1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/departing_time_text"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            />
+        <TextView
+            android:text="@string/traveltime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/totaltravelTimeText"
+            android:textColor="@android:color/darker_gray"/>
+
+        <TextView
+            android:text="@string/arrivalTime"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/arriving_time_text"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/blank_spacetwo" />
+
+    <TextView
+        android:id="@+id/greylineText"
+        style="?android:attr/listSeparatorTextViewStyle"
+        android:paddingTop="1dip"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000" />
+
+    <TextView
+        android:text="@string/priceText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/totalPriceText"
+        android:textSize="16sp"
+        android:textColor="@android:color/holo_blue_light"
+        android:textStyle="bold"
+        android:gravity="end"/>
+</LinearLayout>

@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="15sp"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@android:color/holo_blue_light"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:id="@+id/allScreen">
+
+    <TextView
+        android:text="@string/flight_info"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10sp"
+        android:id="@+id/flightInfo" />
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="20sp"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:id="@+id/FlightNum"
+                android:text="@string/flight_num" />
+
+
+    </LinearLayout>
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.40" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ViewSwitcher
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/depDateSwitcher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:textSize="15sp"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:id="@+id/depDate"
+                android:clickable="true"
+                android:onClick="TextViewClicked"
+                android:text="@string/enter_departure" />
+
+            <EditText
+                android:textSize="15sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_departure"
+                android:id="@+id/editDeparture" />
+        </ViewSwitcher>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ViewSwitcher
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/arrDateSwitcher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="15sp"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:id="@+id/arrDate"
+                android:clickable="true"
+                android:onClick="TextViewClicked"
+                android:text="@string/arr_date" />
+
+            <EditText
+                android:textSize="15sp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/arr_date"
+                android:id="@+id/editArrival" />
+        </ViewSwitcher>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ViewSwitcher
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/cardNumSwitcher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:textSize="15sp"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:id="@+id/airline"
+                android:clickable="true"
+                android:onClick="TextViewClicked"
+                android:text="@string/airline"/>
+
+            <EditText
+                android:textSize="15sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/airline"
+                android:id="@+id/editAirline" />
+        </ViewSwitcher>
+    </LinearLayout>
+
+    <LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <ViewSwitcher
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/originSwitcher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:textSize="15sp"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:id="@+id/origin"
+            android:clickable="true"
+            android:onClick="TextViewClicked"
+            android:text="@string/origin" />
+
+        <EditText
+            android:textSize="15sp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/origin"
+            android:id="@+id/editOrigin"/>
+    </ViewSwitcher>
+</LinearLayout>
+
+    <LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <ViewSwitcher
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/destinationSwitcher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:textSize="15sp"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:id="@+id/destination"
+            android:clickable="true"
+            android:onClick="TextViewClicked"
+            android:text="@string/enter_destination" />
+
+        <EditText
+            android:textSize="15sp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/enter_destination"
+            android:id="@+id/editDestination"/>
+    </ViewSwitcher>
+</LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ViewSwitcher
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/costSwitcher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:textSize="15sp"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:id="@+id/cost"
+                android:clickable="true"
+                android:onClick="TextViewClicked"
+                android:text="@string/cost" />
+
+            <EditText
+                android:textSize="15sp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/cost"
+                android:id="@+id/editCost"/>
+        </ViewSwitcher>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ViewSwitcher
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/seatNumSwitcher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:textSize="15sp"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:id="@+id/seatNum"
+                android:clickable="true"
+                android:onClick="TextViewClicked"
+                android:text="@string/seat_num" />
+
+            <EditText
+                android:textSize="15sp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/seat_num"
+                android:id="@+id/editSeatNum"/>
+        </ViewSwitcher>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </RelativeLayout>
+
+    <Button
+        android:text="@string/cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="33dp"
+        android:layout_marginStart="33dp"
+        android:id="@+id/Cancel"
+        android:layout_alignBaseline="@+id/SaveButton"
+        android:layout_alignBottom="@+id/SaveButton"
+        android:layout_toRightOf="@+id/SaveButton"
+        android:onClick="cancel"
+        android:layout_toEndOf="@+id/SaveButton" />
+
+    <Button
+        android:text="@string/save"
+        android:layout_marginLeft="33dp"
+        android:layout_marginStart="33dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="save"
+        android:id="@+id/SaveButton"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:visibility="invisible"
+        android:layout_marginTop="28dp" />
+
+
+</LinearLayout>
